@@ -1,0 +1,124 @@
+:root {
+  --ink: #1f2430;
+  --muted: #5b6472;
+  --accent: #14507a;
+  --accent-soft: #e8f0f6;
+  --rule: #e3e6ea;
+  --bg: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+header.site {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 0 0;
+}
+
+header.site h1 {
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+header.site h1 a { color: var(--ink); }
+header.site h1 a:hover { text-decoration: none; }
+
+nav.site {
+  display: flex;
+  gap: 1.5rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+nav.site a {
+  color: var(--muted);
+  padding: 0.5rem 0 0.7rem;
+  border-bottom: 3px solid transparent;
+}
+
+nav.site a:hover { color: var(--accent); text-decoration: none; }
+nav.site a.current { color: var(--accent); border-bottom-color: var(--accent); }
+
+main { padding: 2.25rem 0 3rem; }
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.4rem;
+  margin: 2.25rem 0 1rem;
+}
+
+main > h2:first-child, section > h2:first-child { margin-top: 0; }
+
+.profile {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile .bio { flex: 1 1 24rem; }
+
+.profile img {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 4px;
+  flex: 0 0 auto;
+}
+
+ul.papers { list-style: none; padding: 0; margin: 0; }
+
+ul.papers li {
+  margin: 0 0 1.15rem;
+  padding-left: 1.1rem;
+  text-indent: -1.1rem;
+}
+
+.paper-title { font-weight: bold; }
+
+.venue { font-style: italic; }
+
+.note {
+  background: var(--accent-soft);
+  border-radius: 4px;
+  padding: 0.9rem 1.1rem;
+}
+
+footer.site {
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+footer.site p { margin: 0.2rem 0; }
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .profile { flex-direction: column-reverse; }
+}
