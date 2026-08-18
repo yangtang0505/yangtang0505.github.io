@@ -101,6 +101,8 @@ ul.papers li {
 
 .paper-title { font-weight: bold; }
 
+.paper-title a { color: inherit; }
+
 .venue { font-style: italic; }
 
 .note {
