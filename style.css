@@ -91,6 +91,8 @@ main > h2:first-child, section > h2:first-child { margin-top: 0; }
   flex: 0 0 auto;
 }
 
+section + section { margin-top: 4rem; }
+
 ul.papers { list-style: none; padding: 0; margin: 0; }
 
 ul.papers li {
